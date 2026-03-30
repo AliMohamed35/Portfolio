@@ -1,3 +1,5 @@
+import ContactButton from "./buttons/ContactBtn";
+
 // reusable nav bar, buttons or models'
 function NavBar() {
   return (
@@ -22,9 +24,12 @@ function NavBar() {
               </li>
             </ul>
 
-            <button className="cursor-pointer bg-blue-600 p-2 text-white rounded-md">
+            {/* <button className="cursor-pointer bg-blue-600 p-2 text-white rounded-md">
               Contact
-            </button>
+            </button> */}
+            <ContactButton>
+              
+            </ContactButton>
           </div>
         </div>
       </div>
