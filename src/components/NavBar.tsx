@@ -1,39 +1,36 @@
-import ContactButton from "./buttons/ContactBtn";
 
-// reusable nav bar, buttons or models'
+const navLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Process", href: "#process" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "Contact", href: "#contact" },
+];
+
 function NavBar() {
   return (
-    <>
-      <div className=" bg-white shadow-blue-950 py-5">
-        <div className="container m-auto px-4 flex justify-between">
-          <h1 className="text-3xl font-bold">Ali M.</h1>
+    <nav className="bg-white shadow-sm sticky top-0 z-50">
+      <div className="container m-auto px-4 py-4 flex justify-between items-center">
+        <a href="#home" className="text-3xl font-bold text-[#010314] hover:text-[#7079f0] transition-colors duration-300">
+          Ali M.
+        </a>
 
-          <div className="flex items-center gap-2">
-            <ul className="flex gap-2 mr-4 font-bold">
-              <li className="hover:text-blue-600 hover:bg-gray-200 rounded-md  p-2">
-                <a href="#">Home</a>
+        <div className="flex items-center gap-2">
+          <ul className="flex gap-1 mr-4 font-semibold">
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="block px-3 py-2 rounded-lg text-[#010314] hover:text-[#7241FF] hover:bg-[#7079f0]/5 transition-all duration-300"
+                >
+                  {link.label}
+                </a>
               </li>
-              <li className="hover:text-blue-600 hover:bg-gray-200 rounded-md  p-2">
-                <a href="#">About</a>
-              </li>
-              <li className="hover:text-blue-600 hover:bg-gray-200 rounded-md  p-2">
-                <a href="#">Process</a>
-              </li>
-              <li className="hover:text-blue-600 hover:bg-gray-200 rounded-md  p-2">
-                <a href="#">Portfolio</a>
-              </li>
-            </ul>
-
-            {/* <button className="cursor-pointer bg-blue-600 p-2 text-white rounded-md">
-              Contact
-            </button> */}
-            <ContactButton>
-              
-            </ContactButton>
-          </div>
+            ))}
+          </ul>
         </div>
       </div>
-    </>
+    </nav>
   );
 }
 
