@@ -47,34 +47,34 @@ const steps = [
 
 function ProcessSection() {
   return (
-    <section id="process" className="py-24">
-      <div className="container m-auto px-4">
-        <p className="text-sm font-semibold text-[#7241FF] tracking-widest uppercase mb-2">
+    <section id="process" className="py-16 sm:py-20 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-xs sm:text-sm font-semibold text-[#7241FF] tracking-widest uppercase mb-2">
           How I Work
         </p>
-        <h2 className="text-4xl font-bold mb-4">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
           My work process<span className="text-[#7079f0]">.</span>
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mb-16">
+        <p className="text-base sm:text-lg text-gray-600 max-w-2xl mb-10 sm:mb-16">
           A streamlined approach to deliver high-quality results on time and within budget.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="group relative p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-[#7241FF]/20 transition-all duration-300"
+              className="group relative p-6 sm:p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-[#7241FF]/20 transition-all duration-300"
             >
-              <span className="text-5xl font-bold text-gray-100 group-hover:text-[#7079f0]/20 transition-colors duration-300 absolute top-4 right-6">
+              <span className="text-4xl sm:text-5xl font-bold text-gray-100 group-hover:text-[#7079f0]/20 transition-colors duration-300 absolute top-4 right-5 sm:right-6">
                 {step.number}
               </span>
 
-              <div className="w-14 h-14 rounded-xl bg-[#7079f0]/10 text-[#7079f0] flex items-center justify-center mb-6 group-hover:bg-[#7079f0] group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#7079f0]/10 text-[#7079f0] flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-[#7079f0] group-hover:text-white transition-all duration-300">
                 {step.icon}
               </div>
 
-              <h3 className="text-xl font-bold text-[#010314] mb-3">{step.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{step.description}</p>
+              <h3 className="text-lg sm:text-xl font-bold text-[#010314] mb-2 sm:mb-3">{step.title}</h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>

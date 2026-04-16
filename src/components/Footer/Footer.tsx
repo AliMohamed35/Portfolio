@@ -40,25 +40,25 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-[#010314] text-white py-16">
-      <div className="container m-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
-          <div className="max-w-sm">
-            <h3 className="text-3xl font-bold mb-4">Ali M.</h3>
-            <p className="text-gray-400 leading-relaxed">
+    <footer className="bg-[#010314] text-white py-12 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12">
+          <div className="sm:col-span-2 md:col-span-1 max-w-sm">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Ali M.</h3>
+            <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
               Web developer and freelancer based in Cairo, Egypt. Building modern
               web experiences with clean code and thoughtful design.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-4">Navigation</h4>
+            <h4 className="font-semibold text-white mb-3 sm:mb-4">Navigation</h4>
             <ul className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-[#7079f0] transition-colors duration-300"
+                    className="text-sm sm:text-base text-gray-400 hover:text-[#7079f0] transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -68,7 +68,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-4">Connect</h4>
+            <h4 className="font-semibold text-white mb-3 sm:mb-4">Connect</h4>
             <div className="flex gap-3">
               {socials.map((social) => (
                 <a
@@ -84,11 +84,11 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
+        <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center">
+          <p className="text-gray-500 text-xs sm:text-sm">
             &copy; {currentYear} Ali Mohamed. All rights reserved.
           </p>
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-xs sm:text-sm">
             Built with <span className="text-[#7079f0]">React</span> &{" "}
             <span className="text-[#7079f0]">TypeScript</span>
           </p>
