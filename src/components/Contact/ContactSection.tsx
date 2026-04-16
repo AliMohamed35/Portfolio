@@ -2,21 +2,21 @@ import SayHelloButton from "../buttons/SayHello";
 
 function ContactSection() {
   return (
-    <section id="contact" className="py-24">
-      <div className="container m-auto px-4">
+    <section id="contact" className="py-16 sm:py-20 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm font-semibold text-[#7241FF] tracking-widest uppercase mb-2">
+          <p className="text-xs sm:text-sm font-semibold text-[#7241FF] tracking-widest uppercase mb-2">
             Contact
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Let's work together<span className="text-[#7079f0]">.</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">
+          <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto mb-8 sm:mb-12">
             Have a project in mind? I'd love to hear about it. Let's discuss how
             I can help bring your ideas to life.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
             <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-[#7241FF]/20 transition-all duration-300">
               <div className="w-12 h-12 mx-auto rounded-xl bg-[#7079f0]/10 text-[#7079f0] flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -49,7 +49,9 @@ function ContactSection() {
             </div>
           </div>
 
-          <SayHelloButton />
+          <div className="flex justify-center">
+            <SayHelloButton />
+          </div>
         </div>
       </div>
     </section>
