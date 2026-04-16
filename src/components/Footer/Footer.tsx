@@ -40,7 +40,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-[#010314] text-white py-12 sm:py-16">
+    <footer className="bg-[#0a0a0a] text-white py-12 sm:py-16 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12">
           <div className="sm:col-span-2 md:col-span-1 max-w-sm">
@@ -58,7 +58,7 @@ function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm sm:text-base text-gray-400 hover:text-[#7079f0] transition-colors duration-300"
+                    className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -75,7 +75,7 @@ function Footer() {
                   key={social.name}
                   href={social.href}
                   aria-label={social.name}
-                  className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#7079f0] hover:border-[#7079f0]/50 transition-all duration-300"
+                  className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300"
                 >
                   {social.icon}
                 </a>
@@ -89,8 +89,8 @@ function Footer() {
             &copy; {currentYear} Ali Mohamed. All rights reserved.
           </p>
           <p className="text-gray-500 text-xs sm:text-sm">
-            Built with <span className="text-[#7079f0]">React</span> &{" "}
-            <span className="text-[#7079f0]">TypeScript</span>
+            Built with <span className="text-white">React</span> &{" "}
+            <span className="text-white">TypeScript</span>
           </p>
         </div>
       </div>
