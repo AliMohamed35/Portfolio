@@ -14,7 +14,7 @@ const ContactButton = () => {
 
 const StyledWrapper = styled.div`
   .ui-btn {
-    --btn-default-bg: #010314;
+    --btn-default-bg: #0a0a0a;
     --btn-padding: 15px 20px;
     --btn-hover-bg: rgb(51, 51, 51);
     --btn-transition: .3s;
@@ -22,7 +22,7 @@ const StyledWrapper = styled.div`
     --btn-animation-duration: 1.2s;
     --btn-shadow-color: rgba(0, 0, 0, 0.137);
     --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
-    --hover-btn-color: #7241FF;
+    --hover-btn-color: #171717;
     --default-btn-color: #fff;
     --font-size: 16px;
     /* 👆 this field should not be empty */
@@ -46,7 +46,7 @@ const StyledWrapper = styled.div`
     overflow: hidden;
     box-shadow: var(--btn-shadow);
     border-radius: 10px;
-    border: 2px solid #2A2B3A;
+    border: 2px solid #0a0a0a;
   }
 
   .ui-btn span {
@@ -67,7 +67,7 @@ const StyledWrapper = styled.div`
   .ui-btn:hover, .ui-btn:focus {
     background: var(--btn-default-bg);
     box-shadow: 0px 0px 10px 0px rgba(119, 68, 255, 0.70);
-    border: 2px solid #7241FF;
+    border: 2px solid #171717;
     ;
   }
 

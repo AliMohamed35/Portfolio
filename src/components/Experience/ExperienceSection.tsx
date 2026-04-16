@@ -61,30 +61,30 @@ function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-b from-white via-[#f8f6ff] to-white overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-28 overflow-hidden text-white"
     >
-      <div className="pointer-events-none absolute top-20 right-10 w-72 h-72 rounded-full bg-[#7241FF]/10 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-20 left-10 w-80 h-80 rounded-full bg-[#7079f0]/10 blur-3xl" />
+      <div className="pointer-events-none absolute top-20 right-10 w-72 h-72 rounded-full bg-white/5 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-20 left-10 w-80 h-80 rounded-full bg-white/5 blur-3xl" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
-            <span className="h-px w-8 bg-[#7241FF]" />
-            <p className="text-xs sm:text-sm font-semibold text-[#7241FF] tracking-widest uppercase">
+            <span className="h-px w-8 bg-white/40" />
+            <p className="text-xs sm:text-sm font-semibold text-gray-400 tracking-widest uppercase">
               Experience
             </p>
-            <span className="h-px w-8 bg-[#7241FF]" />
+            <span className="h-px w-8 bg-white/40" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            My journey so far<span className="text-[#7079f0]">.</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white">
+            My journey so far<span className="text-gray-500">.</span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto mt-4">
+          <p className="text-base sm:text-lg text-gray-400 max-w-xl mx-auto mt-4">
             Three years of learning, shipping and sharpening my craft as a developer.
           </p>
         </div>
 
         <div className="relative">
-          <div className="absolute left-6 sm:left-8 top-3 bottom-3 w-px bg-gradient-to-b from-[#7079f0] via-[#7241FF] to-transparent" />
+          <div className="absolute left-6 sm:left-8 top-3 bottom-3 w-px bg-linear-to-b from-white/30 via-white/20 to-transparent" />
 
           <div className="flex flex-col gap-6 sm:gap-8">
             {visible.map((exp, idx) => (
@@ -97,7 +97,7 @@ function ExperienceSection() {
           <div className="mt-10 sm:mt-12 flex justify-center">
             <button
               onClick={() => setExpanded((v) => !v)}
-              className="group inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white border border-gray-200 text-sm font-semibold text-[#010314] hover:border-[#7241FF] hover:text-[#7241FF] shadow-sm hover:shadow-md transition-all duration-300"
+              className="group inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/5 border border-white/10 text-sm font-semibold text-white hover:bg-white/10 hover:border-white/20 shadow-sm hover:shadow-md transition-all duration-300"
             >
               {expanded
                 ? "Show less"
@@ -129,37 +129,37 @@ function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
     <div className="relative pl-16 sm:pl-20 group">
       <div className="absolute left-0 top-3 flex items-center justify-center">
         <div className="relative">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#7079f0] to-[#7241FF] flex items-center justify-center text-white font-bold text-sm sm:text-base shadow-lg shadow-[#7079f0]/40 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-linear-to-br from-white to-gray-400 flex items-center justify-center text-[#0a0a0a] font-bold text-sm sm:text-base shadow-lg shadow-white/10 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
             {num}
           </div>
           {isCurrent && (
             <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
               <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping" />
-              <span className="relative inline-flex h-3.5 w-3.5 rounded-full bg-green-500 border-2 border-white" />
+              <span className="relative inline-flex h-3.5 w-3.5 rounded-full bg-green-500 border-2 border-[#0a0a0a]" />
             </span>
           )}
         </div>
       </div>
 
-      <div className="relative p-5 sm:p-7 bg-white rounded-2xl border border-gray-100 hover:border-[#7241FF]/30 hover:shadow-xl hover:shadow-[#7241FF]/5 transition-all duration-500 overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#7079f0] to-[#7241FF] scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500" />
+      <div className="relative p-5 sm:p-7 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/25 hover:bg-white/[0.07] hover:shadow-xl hover:shadow-black/50 transition-all duration-500 overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-white to-gray-400 scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500" />
 
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-2 mb-1">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#010314]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">
                 {exp.role}
               </h3>
               {isCurrent && (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-green-100 text-green-700 text-[10px] sm:text-xs font-semibold rounded-full">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-green-500/15 text-green-400 text-[10px] sm:text-xs font-semibold rounded-full border border-green-500/30">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
                   Current
                 </span>
               )}
             </div>
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
-              <span className="font-semibold text-[#7241FF]">{exp.company}</span>
-              <span className="hidden sm:inline text-gray-300">·</span>
+              <span className="font-semibold text-gray-300">{exp.company}</span>
+              <span className="hidden sm:inline text-gray-600">·</span>
               <span className="text-gray-500 inline-flex items-center gap-1">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -170,19 +170,19 @@ function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
             </div>
           </div>
 
-          <span className="inline-flex items-center self-start px-3 py-1.5 bg-[#7079f0]/10 text-[#7241FF] text-xs font-semibold rounded-full whitespace-nowrap">
+          <span className="inline-flex items-center self-start px-3 py-1.5 bg-white/10 text-gray-200 text-xs font-semibold rounded-full whitespace-nowrap border border-white/10">
             {exp.period}
           </span>
         </div>
 
-        <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+        <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-4">
           {exp.description}
         </p>
 
         <ul className="space-y-1.5 mb-5">
           {exp.highlights.map((h) => (
-            <li key={h} className="flex items-start gap-2 text-xs sm:text-sm text-gray-600">
-              <svg className="w-4 h-4 text-[#7241FF] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <li key={h} className="flex items-start gap-2 text-xs sm:text-sm text-gray-400">
+              <svg className="w-4 h-4 text-white mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
               <span>{h}</span>
@@ -194,7 +194,7 @@ function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
           {exp.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2.5 py-1 text-[11px] font-semibold bg-gray-100 text-gray-700 rounded-md hover:bg-[#7079f0]/10 hover:text-[#7241FF] transition-colors"
+              className="px-2.5 py-1 text-[11px] font-semibold bg-white/5 text-gray-300 rounded-md border border-white/5 hover:bg-white/10 hover:text-white transition-colors"
             >
               {tag}
             </span>

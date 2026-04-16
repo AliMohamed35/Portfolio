@@ -18,8 +18,8 @@ const SayHelloButton = () => {
 
 const StyledWrapper = styled.div`
   .contactButton {
-    background: #7079f0;
-    color: white;
+    background: #ffffff;
+    color: #0a0a0a;
     font-family: inherit;
     padding: 0.45em;
     padding-left: 1em;
@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
     letter-spacing: 0.05em;
     display: flex;
     align-items: center;
-    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    box-shadow: inset 0 0 1.6em -0.6em rgba(0,0,0,0.25);
     overflow: hidden;
     position: relative;
     height: 2.8em;
@@ -47,19 +47,19 @@ const StyledWrapper = styled.div`
     height: 2.2em;
     width: 2.2em;
     border-radius: 0.7em;
-    box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em rgba(255,255,255,0.2);
     right: 0.3em;
     transition: all 0.3s;
   }
 
   .contactButton:hover {
     transform: translate(-0.05em, -0.05em);
-    box-shadow: 0.15em 0.15em #5566c2;
+    box-shadow: 0.15em 0.15em rgba(255,255,255,0.4);
   }
 
   .contactButton:active {
     transform: translate(0.05em, 0.05em);
-    box-shadow: 0.05em 0.05em #5566c2;
+    box-shadow: 0.05em 0.05em rgba(255,255,255,0.4);
   }`;
 
 export default SayHelloButton;
